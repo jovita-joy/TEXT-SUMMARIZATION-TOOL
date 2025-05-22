@@ -23,6 +23,7 @@ Uses beam search decoding to generate a concise, readable summary.
 Decodes and prints the final summary to the console.
 
 This approach can be used in various applications such as document summarization, news aggregation, content recommendation, academic research tools, or any NLP-based product that requires understanding and condensing long-form text.
+
 The summarization pipeline is built manually using the AutoTokenizer and AutoModelForSeq2SeqLM classes provided by Hugging Face. These allow full control over the model loading and summarization configuration.
 1.Load Model and Tokenizer
 The tokenizer converts raw text into a sequence of token IDs that the model can understand.
