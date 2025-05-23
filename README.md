@@ -32,16 +32,34 @@ This approach can be used in various applications such as document summarization
 The summarization pipeline is built manually using the AutoTokenizer and AutoModelForSeq2SeqLM classes provided by Hugging Face. These allow full control over the model loading and summarization configuration.
 
 1.Load Model and Tokenizer
+
 The tokenizer converts raw text into a sequence of token IDs that the model can understand.
 
+tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
+
+model = AutoModelForSeq2SeqLM.from_pretrained("facebook/bart-large-cnn")
+
+
 2.Tokenize Input Text
+
 The text is tokenized with a maximum length of 1024 tokens (BART’s limit), and truncated if longer.
 
+inputs = tokenizer.encode(text, return_tensors='pt', max_length=1024, truncation=True)
+
+
 3.Generate Summary
+
 Beam search is used to generate high-quality summaries. You can adjust parameters like max_length, min_length, num_beams, etc.
 
+summary_ids = model.generate(inputs, max_length=80, min_length=30, length_penalty=2.0, num_beams=4, early_stopping=True)
+
+
 4.Decode Summary
+
 The output token IDs are converted back into a readable string.
+
+summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+
 
 Why Use facebook/bart-large-cnn?
 
