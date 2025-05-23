@@ -61,6 +61,7 @@ The output token IDs are converted back into a readable string.
 summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
 
+
 Why Use facebook/bart-large-cnn?
 
 It is a fine-tuned version of Facebook's BART model, specifically designed for summarization tasks.
