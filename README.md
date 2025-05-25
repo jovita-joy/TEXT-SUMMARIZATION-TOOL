@@ -70,5 +70,8 @@ Produces fluent and human-like summaries.
 
 Supports abstractive summarization, unlike traditional extractive methods.
 
+OUTPUT
+![Image](https://github.com/user-attachments/assets/98493648-d186-467d-9eb9-74ec0a6137ca)
+
 
 
