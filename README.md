@@ -12,10 +12,11 @@
 "MENTOR":Neela Santhosh 
 
 
-Text Summarization with Hugging Face BART (facebook/bart-large-cnn)
+# Text Summarization with Hugging Face BART (facebook/bart-large-cnn)
+
 This project demonstrates how to perform abstractive text summarization using Hugging Face's Transformers library with the powerful facebook/bart-large-cnn model. Abstractive summarization generates new phrases or sentences that convey the most important information from the original content, rather than just extracting key sentences.
 
-What This Script Does?
+# What This Script Does?
 
 The script:
 
@@ -64,7 +65,7 @@ summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
 
 
-Why Use facebook/bart-large-cnn?
+# Why Use facebook/bart-large-cnn?
 
 It is a fine-tuned version of Facebook's BART model, specifically designed for summarization tasks.
 
